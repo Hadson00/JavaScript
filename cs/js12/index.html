@@ -26,6 +26,30 @@
         <ellipse cx="110" cy="40" rx="65" ry="15" style="fill: #009D6b;"/>
         Infelizmente seu Navegador não suporta SVG.
       </svg>
+    
+      <h2>Formas em SVG</h2>
+      <svg class="svgcenter" height="210" width="900">
+        <polygon points="100,10 40,198 190,78 10,78 160,198" style="fill: #009D6B; stroke: #326A78; stroke-width: 5; fill-rule: nonzero;"/>
+      </svg>
+
+      <h2>Eventos</h2>
+
+      <svg class="svgcenter" width="120px" height="100%" xmls="http://www.w3.org/200/svg">
+        <script type="text/javascript">
+          <![CDATA[
+            function acende(evt){
+              evt.target.setAttribute('opacity', '1.0');
+            }
+            function apaga(evt){
+              evt.target.setAttribute('opacity','0.4');
+            }
+          ]]>
+        </script>
+        <g>
+          <rect x="10" y="100" width="45" height="45" fill="#009D6B" opacity="0.4" onmouseover="acende(evt);" onmouseout="apaga(evt);"/>
+          <rect x="65" y="100" width="45" height="45" fill="#326A78" opacity="0.4" onmouseover="acende(evt);" onmouseout="apaga(evt);"/>
+        </g>
+      </svg>
 
     </div>
   </div>
