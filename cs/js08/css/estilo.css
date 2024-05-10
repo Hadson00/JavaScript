@@ -1,0 +1,25 @@
+body{
+    font-family: "Lucida Console",Verdana,Arial;
+    color: #009D6B;
+}
+input[type=text]{
+    width: 15%;
+    box-sizing: border-box;
+    box-shadow: 5px 6px 8px 0px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    padding: 12px 20px 12px 20px;
+
+}
+
+button{
+    font-family: "Lucida Console", Roboto, Arial;
+    font-weight: bold;
+    color: #326a78;
+    padding: 12px 12px;
+    margin: 8px 2px;
+    border-radius: 7px;
+    cursor: pointer;
+}

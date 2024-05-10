@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>js10 - jQuery</title>
+    <!-- script externo  -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <!-- script local -->
+    <script src="./jquery/jquery.js"></script>
+    <link rel="stylesheet" href="./css/estilo.css">
+    <!-- script js  -->
+    <script>
+      $(document).ready(function(){
+        // apresenta a div conceito
+        $('#palavra').mouseover(function(){
+          $('#conceito').show();
+        });
+        // oculta a div conceito
+        $('#palavra').mouseout(function(){
+          $('#conceito').hide();
+        });
+        // apresenta div panel
+        $('#flip').click(function(){
+          $('#panel').slideDown("slow");
+        });
+        $('#panel').click(function(){
+          $('#panel').slideUp('slow');
+        });
+        // troca cor de <h3> id='cor'
+        $('#vermelho').click(function(){
+          $('#cor').css({'color':'red'});
+        });
+        $('#preto').click(function(){
+          $('#cor').css({'color':'black'});
+        });
+        $('#branco').click(function(){
+          $('#cor').css({'color':'white'});
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Utilizando jQuery</h1>
+      <!-- hide e show -->
+      <div id="palavra">
+        <h3>Javascript é:</h3>
+      </div>
+      <div id="conceito">
+        <p>
+          Javascript é uma linguagem de programação que permite implementar funcionalidades mais complexas em páginas web.
+        </p>
+      </div>
+      <!-- slideshow -->
+      <div id="flip">
+        <h3>Clique aqui para apresentar o painel</h3>
+      </div>
+      <div id="panel">
+        <p>
+          jQuery é uma Biblioteca de funções Javascript que interage com o HTML, desenvolvida para simplificar os scripts interpretados no navegador do cliente.
+        </p>
+        <br>
+        <strong style="color: white">Clique aqui para recolher o painel</strong>
+      </div>
+      <!-- css -->
+      <div id="estilo">
+        <h3 id="cor">jQuery também pode alterar propriedas CSS</h3>
+        <br>
+        <button type="button" name="vermelho" id="vermelho">Vermelho</button>
+        <button type="button" name="preto" id="preto">Preto</button>
+        <button type="button" name="branco" id="branco">Branco</button>
+      </div>
+    </div>
+  </body>
+</html>

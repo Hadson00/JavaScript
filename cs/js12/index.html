@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>js12 - SVG</title>
+  <link rel="stylesheet" href="./css/estilo.css">
+</head>
+<body>
+  <div id="container">
+    <div id="svg">
+      <h2>Imagem PNG (Bitmap)</h2>
+      <img class="imgcenter" src="./img/img2.png" alt="PNG">
+      <br>
+      <h2>Imagem SVG (Imagem Vetorial)</h2>
+      <img src="./img/img2.svg" alt="SVG" class="imgcenter">
+      
+      <h2>SVG embutido no HTML - &lt;svg&gt;</h2>
+      <svg class="svgcenter" width="205" height="105">
+        <rect width="200" height="100" style="fill: #009D6B; stroke-width: 3; stroke: #326A78;"/>
+        Infelizmente seu Navegador não suporta SVG.
+      </svg>
+
+      <svg class="svgcenter" width="900" height="100">
+        <ellipse cx="120" cy="40" rx="85" ry="25" style="fill: #326A78;"/>
+        <ellipse cx="110" cy="40" rx="65" ry="15" style="fill: #009D6b;"/>
+        Infelizmente seu Navegador não suporta SVG.
+      </svg>
+
+    </div>
+  </div>
+</body>
+</html>

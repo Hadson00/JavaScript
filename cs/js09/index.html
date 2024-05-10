@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS09 - Manipulando XML com JavaScript</title>
+    <link rel="stylesheet" href="./css/estilo.css">
+</head>
+<body>
+
+    <script>
+        
+        //cria uma requisição xml
+        if(window.XMLHttpRequest){
+            xmlhttp = new XMLHttpRequest();
+        } else { //compatibilidade com I.E. 
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        //abre o arquivo xml utilizando o metodo get
+        xmlhttp.open("GET","./xml/catalogo.xml",false);
+        // envia o conteudo
+        xmlhttp.send();
+        // especifica o tipo de retorno
+        xmlDoc = xmlhttp.responseXML
+
+        //cria cabecalho da tabela
+        document.write("<table border = '1'>");
+        document.write("<caption>Catálogo de Discos</caption>");
+        document.write("<td id =\"cabecalho\">Artista:</td><td id=\"cabecalho\">Disco:</td>");
+
+        // cria o objeto x que recebe os objetos CD do XML
+        let x = xmlDoc.getElementsByTagName('CD');
+        // le os valores dos objetos CD e os insere no corpo da tabela
+        for(let i = 0; i < x.length; i++){
+            // cria linha e a celula
+            document.write("<tr><td>");
+            // insere o conteudo da primeira celula e inicia a outra
+            document.write(x[i].getElementsByTagName('ARTIST')[0].childNodes[0].nodeValue);
+            document.write("</td><td>");
+            document.write(x[i].getElementsByTagName('TITLE')[0].childNodes[0].nodeValue);
+            document.write("</td></tr>");
+        }
+
+        // finaliza a tabela
+        document.write("</table>");
+
+    </script>
+</body>
+</html>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 

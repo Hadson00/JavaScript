@@ -1,0 +1,35 @@
+table{
+    font-family: "Lucida Console", Verdana, Arial;
+    border-collapse: collapse;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #cabecalho{
+    text-align: center;
+    font-weight: bold;
+    padding: 15px;
+    background-color: #009D6B;
+    color: white;
+  }
+  
+  tr{
+    margin: 8px;
+    font-size: 20px;
+  }
+  
+  tr:nth-child(even){
+    background-color: #CCC;
+  }
+  
+  td{
+    padding: 15px;
+  }
+  
+  caption{
+    font-size: 2em;
+    padding: 15px;
+    color: #085D70;
+  }
+  
