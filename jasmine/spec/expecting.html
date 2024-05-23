@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jasmine</title>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.6.0/jasmine.css"></link>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.6.0/jasmine.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.6.0/jasmine-html.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.6.0/boot.js"></script>
+    <script src="./js/scripts.js"></script>
+</head>
+<body>
+    <script>
+        const x = new Calculadora();
+        describe("test class", function(){
+            it('test if the object x is an object', function(){
+                expect(x).toEqual(jasmine.any(Object));
+            });
+        });
+        describe('sum function', function() {
+            it('n1 + n2', function() {
+                expect(x.sum(2,3)).toBe(5);
+                expect(x.sum(0,0)).toBe(0);
+                expect(x.sum(10,50)).not.toBe(10);
+                expect(x.sum(10,5)).toEqual(jasmine.any(Number));
+            });
+        });
+        describe("division function", function(){
+            it('n1 / n2', function(){
+                expect(x.division(2,2)).toBe(1);
+                expect(x.division(10,5)).toEqual(jasmine.any(Number));
+            });
+        });
+        describe("multiplication function", function(){
+            it('n1 * n2', function(){
+                expect(x.multiplication(2,2)).toBe(4);
+                expect(x.multiplication(10,5)).toEqual(jasmine.any(Number));
+            });
+        });
+        describe("subtration function", function(){
+            it('n1 - n2', function(){
+                expect(x.subtraction(4,2)).toBe(2);
+                expect(x.subtraction(10,5)).toEqual(jasmine.any(Number));
+            });
+        });
+    </script>
+</body>
+</html>
